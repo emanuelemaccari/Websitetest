@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softwarehouse - Sviluppo App e Siti Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .animated {
+            transition: transform 0.3s ease-in-out;
+        }
+        .animated:hover {
+            transform: scale(1.05);
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .service {
+            flex: 0 1 30%;
+            background: #f4f4f4;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .faq-item {
+            text-align: left;
+            margin: 10px 0;
+        }
+        .faq-item h4 {
+            cursor: pointer;
+            margin: 0;
+        }
+        .faq-item p {
+            display: none;
+            margin: 5px 0 0 0;
+        }
+        .faq-item h4:after {
+            content: ' +';
+            float: right;
+        }
+        .faq-item.open h4:after {
+            content: ' -';
+        }
+        .faq-item.open p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Softwarehouse</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Chi Siamo</a></li>
+            <li><a href="#services">Servizi</a></li>
+            <li><a href="#contact">Contatti</a></li>
+            <li><a href="#reviews">Recensioni</a></li>
+            <li><a href="#why-us">Perché Sceglierci</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="animated">
+    <h2>Benvenuti nella nostra Softwarehouse</h2>
+    <p>Sviluppiamo app iOS e Android, gestionali per aziende e siti web di alta qualità.</p>
+</section>
+
+<section id="about" class="animated">
+    <h2>Chi Siamo</h2>
+    <p>Un team di esperti sviluppatori appassionati di tecnologia e innovazione.</p>
+</section>
+
+<section id="services" class="animated services">
+    <h2>Servizi</h2>
+    <div class="service">
+        <h3>Sviluppo App iOS</h3>
+        <p>Creiamo app native per dispositivi iOS con prestazioni elevate.</p>
+    </div>
+    <div class="service">
+        <h3>Sviluppo App Android</h3>
+        <p>App Android personalizzate per soddisfare tutte le tue esigenze.</p>
+    </div>
+    <div class="service">
+        <h3>Gestionali per Aziende</h3>
+        <p>Soluzioni gestionali su misura per migliorare l'efficienza aziendale.</p>
+    </div>
+    <div class="service">
+        <h3>Siti Web</h3>
+        <p>Siti web responsive e ottimizzati per ogni dispositivo.</p>
+    </div>
+</section>
+
+<section id="contact" class="animated">
+    <h2>Contatti</h2>
+    <p>Email: info@softwarehouse.com</p>
+    <p>Telefono: +39 123 456 7890</p>
+</section>
+
+<section id="reviews" class="animated">
+    <h2>Recensioni</h2>
+    <p>I nostri clienti ci amano! Ecco cosa dicono di noi:</p>
+    <blockquote>"Servizio eccellente e team fantastico!" - Cliente 1</blockquote>
+    <blockquote>"Le loro app hanno rivoluzionato il nostro business." - Cliente 2</blockquote>
+</section>
+
+<section id="why-us" class="animated">
+    <h2>Perché Sceglierci</h2>
+    <p>Offriamo soluzioni innovative, personalizzate e di alta qualità per soddisfare tutte le tue esigenze tecnologiche.</p>
+</section>
+
+<section id="faq" class="animated">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+        <h4>Quali linguaggi di programmazione utilizzate?</h4>
+        <p>Utilizziamo una varietà di linguaggi tra cui Swift, Kotlin, Java, JavaScript e Python.</p>
+    </div>
+    <div class="faq-item">
+        <h4>Quanto tempo ci vuole per sviluppare un'app?</h4>
+        <p>Il tempo di sviluppo dipende dalla complessità dell'app, ma di solito va da 3 a 6 mesi.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Softwarehouse. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-item h4').forEach(item => {
+        item.addEventListener('click', () => {
+            const faqItem = item.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>
